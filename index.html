@@ -1,0 +1,250 @@
+<!--
+    @license
+    Copyright (c) 2014 The Polymer Project Authors. All rights reserved.
+    This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+    The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+    The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+    Code distributed by Google as part of the polymer project is also
+    subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+<!doctype html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <title>Polymer Presentation</title>
+
+  <script src="../bower_components/platform/platform.js"></script>
+  <link rel="import" href="../bower_components/chart-elements/chart-elements.html">
+  <link rel="import" href="../bower_components/core-input/core-input.html">
+  <link rel="import" href="../bower_components/github-card/webcomponent/github-card.html">
+  <link rel="import" href="../bower_components/google-slides/google-slides.html">
+  <link rel="import" href="../bower_components/google-doc/google-doc.html" />
+  <link rel="import" href="../bower_components/google-map/google-map.html" />
+  <link rel="import" href="../bower_components/prism-js/prism-js.html">
+  <link rel="import" href="../bower_components/x-gif/dist/x-gif.html">
+
+
+  <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="main.css">
+
+</head>
+<body unresolved>
+
+  <google-slides>
+
+    <google-slide class="googlered" layout vertical center center-justified>
+      <h1>Polymer and Web Components</h1>
+      <p>
+          <google-slide-author
+              avatar="../images/jb.jpg"
+              plus="Jonathan Belcher">
+          </google-slide-author>
+      </p>
+      <p><a href="https://twitter.com/belcherj">@belcherj</a></p>
+      <p>A presentation by Jonathan Belcher</p>
+    </google-slide>
+
+    <google-slide class="googleyellow" layout vertical center center-justified>
+        <h1>Web Components</h1>
+        <p>Custom Elements</p>
+        <p>HTML Imports</p>
+        <p>Templates</p>
+        <p>Shadow DOM</p>
+    </google-slide>
+
+    <google-slide class="googlegreen" layout vertical center center-justified>
+      <h1>Custom Elements</h1>
+
+      <p>&lt;foo-bar&gt;&lt;/foo-bar&gt;</p>
+
+    </google-slide>
+
+    <google-slide class="googlegreen" layout vertical center center-justified>
+      <h1>HTML Imports</h1>
+      <p>&lt;link rel="import" href="foo-bar.html"&gt;</p>
+    </google-slide>
+
+    <google-slide class="googlegreen" layout vertical center center-justified>
+      <h1>Templates</h1>
+      <p>
+        <a
+          href="http://jsfiddle.net/belcherj/g1jmwLf1/"
+          target="_blank">
+          Live Example
+        </a>
+      </p>
+    </google-slide>
+
+    <google-slide class="googlegreen" layout vertical center center-justified>
+      <h1>Shadow DOM</h1>
+      <p>
+        <a
+          href="http://jsfiddle.net/belcherj/p1b6hcdh/"
+          target="_blank">
+          Live Example
+        </a>
+      </p>
+    </google-slide>
+
+    <google-slide class="googlegreen" layout vertical center center-justified>
+      <h1>Can I use Web Components?</h1>
+      <p>Latest Chrome Natively</p>
+      <p>
+        <a
+          href="https://www.polymer-project.org/resources/compatibility.html"
+          target="_blank">
+          Polyfills
+        </a>
+      </p>
+    </google-slide>
+
+    <google-slide class="googlegreen" layout vertical center center-justified>
+      <h1>Polymer Project</h1>
+      <p>Google</p>
+      <p>Syntactic Sugar - <a href="http://jsfiddle.net/belcherj/ejhbcmwt/" target="_blank">Example</a></p>
+      <p>Two way data binding</p>
+      <p>Demo/Docs - <a href="http://addyosmani.github.io/google-slides/components/google-slides/" target="_blank">Example</a></p>
+    </google-slide>
+
+    <google-slide class="googlegreen" layout vertical center center-justified>
+      <google-map latitude="39.9522" longitude="-75.1639" minZoom="9" maxZoom="11" fit>
+        <google-map-marker latitude="39.9522" longitude="-75.1639"
+                           title="City Hall" draggable="true">
+        </google-map-marker>
+      </google-map>
+    </google-slide>
+
+    <google-slide class="googlegreen" layout vertical center center-justified>
+      <h1>Example</h1>
+      <github-card user="belcherj"></github-card>
+    </google-slide>
+
+    <google-slide class="googlegreen" layout vertical center center-justified>
+      <h1>Example</h1>
+      <div><google-doc styles key="1zZIFe15PBfAZUQB1d2YWsqRFeQnTW3nTr00f4_JC_Js"></google-doc></div>
+    </google-slide>
+
+    <google-slide class="googlegreen" layout vertical center center-justified>
+      <h1>Example</h1>
+      <p>
+        <a href="http://zenorocha.github.io/voice-elements/" target="_blank">
+          &lt;voice-elements&gt;&lt;/voive-elements&gt;
+        </a>
+      </p>
+    </google-slide>
+
+    <google-slide class="googlegreen" layout vertical center center-justified>
+      <h1>Example</h1>
+      <template is="auto-binding">
+        <p>
+          gif:
+          <core-input type="text" value="{{gif}}">
+          </core-input>
+        </p>
+        <p>
+          speed:
+          <core-input type="number" value="{{speed}}">
+          </core-input>
+        </p>
+
+        <x-gif src="{{gif}}" ping-pong speed="{{speed}}"></x-gif>
+      </template>
+      http://i.imgur.com/RY2vTBQ.gif
+      http://i.imgur.com/m25uYzq.gif
+    </google-slide>
+
+    <google-slide class="googlegreen" layout vertical center center-justified>
+      <h1>Example</h1>
+      <template is="auto-binding">
+
+        <core-input
+          type="text"
+          value="{{data}}"
+          multiline
+          rows="3">
+        </core-input>
+
+        <prism-js
+          language="javascript"
+          linenumbers="true"
+          inputValue="{{data}}">
+        </prism-js>
+      </template>
+    </google-slide>
+
+    <google-slide class="googlegreen" layout vertical center center-justified>
+      <h1>Examples</h1>
+      <p>
+        <a
+          href="http://builtwithpolymer.org/"
+          target="_blank">
+          Built with Polymer
+        </a>
+      </p>
+    </google-slide>
+
+    <google-slide class="googlegreen" layout vertical center center-justified>
+      <chart-pie
+          width="200"
+          height="200"
+          values="[20, 30, 100]">
+      </chart-pie>
+
+      <chart-doughnut
+          width="200"
+          height="200"
+          values="[30, 50, 100, 40, 120]">
+      </chart-doughnut>
+
+      <chart-polar-area
+          width="200"
+          height="200"
+          values="[30, 90, 18, 58, 82]">
+      </chart-polar-area>
+
+      <chart-radar labels="['Jan','Feb','Mar','Apr','May','Jun','Jul']"
+                   values="[[65,59,90,81,56,55,40], [28,48,40,19,96,27,100]]",
+                   colors= "['253,180,92','247,70,74','70,191,189','148,159,177','77,83,96']">
+      </chart-radar>
+
+      <chart-line
+          width="400"
+          height="200"
+          labels="['Monday','Tuesday','Wednesday','thursday','Friday','Saturday','Sunday']"
+          values="[[10,14,20,25,13,9,40]]"
+          colors="['253,180,92','247,70,74','70,191,189','148,159,177','77,83,96']">
+      </chart-line>
+
+      <chart-bar
+          width="400"
+          height="200"
+          labels="['Jan','Feb','Mar','Apr','May','Jun','Jul']",
+          values="[[65,59,90,81,56,55,40], [28,48,40,19,96,27,100]]"
+          colors="['253,180,92','247,70,74','70,191,189','148,159,177','77,83,96']">
+      </chart-bar>
+    </google-slide>
+
+    <google-slide class="googlegreen" layout vertical center center-justified>
+      <h1>Why Web Components</h1>
+      <p>Productivity</p>
+      <p>Declaritive</p>
+      <p>Composability</p>
+      <p>Maintainability</p>
+      <p>Reusability</p>
+      <p>Extensibility</p>
+      <p>Scoping</p>
+      <p>Interoperability</p>
+      <p>Accessibility</p>
+    </google-slide>
+
+    <google-slide class="googlegreen" layout vertical center center-justified>
+      <h1>Questions?</h1>
+      <p>@belcherj</p>
+      <p>I work at SunGard Consulting Services.  We are hiring.</p>
+    </google-slide>
+
+  </google-slides>
+
+</body>
+</html>
+Q ``

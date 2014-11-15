@@ -1,0 +1,17 @@
+{
+  "name": "polymer-presentation",
+  "version": "0.0.1",
+  "dependencies": {
+    "google-slides": "addyosmani/google-slides",
+    "x-gif": "geelen/x-gif#~0.1.1",
+    "github-card": "pazguille/github-card",
+    "prism-js": "addyosmani/prism-js#~0.1.0",
+    "chart-elements": "robdodson/chart-elements#~0.1.1",
+    "google-map": "GoogleWebComponents/google-map#~0.3.2"
+  },
+  "resolutions": {
+    "platform": "^0.4.0",
+    "core-component-page": "^0.4.0",
+    "polymer": "^0.4.0"
+  }
+}
